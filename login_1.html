@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- <script src="login.js"></script> -->
+    <title>Login Page</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("loginback.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 420px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #0a0a0a;
+            border-radius: 10px;
+            padding: 30px 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .container h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .container .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            outline: none;
+            border: 2px solid rgba(11, 11, 11, 0.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #000000;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: #0a0a0a;
+            text-align: center;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .container .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            margin: -15px 0 15px;
+        }
+
+        .remember-forgot label input {
+            accent-color: #fff;
+            margin-right: 3px;
+        }
+
+        .remember-forgot a {
+            color: #050505;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+
+        .register-link p a {
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+
+        .dis{
+            display: block;
+            background-color: #fff;
+            text-size-adjust: 10px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+    </style>
+
+    <script></script>
+
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <form class="login-form" action="login.php"  method="POST">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <div class="error-message"><?php echo $error_message; ?></div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn" >Login</button>
+
+                <div class="register-link">
+                    <p>Don't have an account?
+                        <a href="#">Register here</a>
+                    </p>
+                </div>
+            </form>
+            <br>
+            <br>
+
+            <!-- <div  class="dis" ng-show="message" class="message">{{ message }}</div> -->
+        </div>
+    </div>
+</body>
+
+</html>
